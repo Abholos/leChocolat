@@ -40,4 +40,11 @@ body {
 tr:hover {
   background-color: #dbb08db0 !important;
 }
-/* * * * * * * /
+/* * * * * * * */
+
+.bg-secondary {
+  background-color: #6e3f19 !important;
+}
+.card-body {
+  background-color: #dbb08db0;
+}
