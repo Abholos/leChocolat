@@ -43,6 +43,7 @@ tr:hover {
 /* * * * * * * */
 
 .bg-secondary {
+  color: floralwhite !important;
   background-color: #6e3f19 !important;
 }
 .card-body {
