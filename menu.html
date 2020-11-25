@@ -9,14 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top ">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html"><a class="navbar-brand" href="./index.html"><img
                         src="images/logo.png" height="40" width="54"></a></a>
@@ -26,16 +28,27 @@
             </button>
 
             <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span>
                             Home</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="./menu.html"><span class="fa fa-info fa-lg"></span>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span
+                                class="fa fa-info fa-lg"></span>
                             About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>
+                            Menu</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+
+                    <a data-toggle="modal" data-target="#cartModal" role="button" class="btn btn-sm btn-warning"><span
+                            class="fa fa-shopping-cart cart-counter"> 0</span></a>
+                    <a class="btn btn-sm btn-danger" href="./menu.html">Empty Cart</a>
+                    <!-- <p><span class="cart-counter">1</span></p> -->
+                    <!-- <div class='addtocart'>addtocart</div> -->
+
+                </span>
             </div>
 
         </div>
@@ -59,9 +72,8 @@
     </header>
 
 
-
+    <!-- BREADCRUMB -->
     <div class="container">
-    
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
@@ -69,21 +81,231 @@
             </ol>
         </nav>
 
-    
-        <div class="col-12">
-            <h3>Menu</h3>
+        <!-- ITEMS -->
+        <div class="row">
+            <div class="col-lg-12 my-3">
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <button class="btn btn-warning" id="list">
+                            List View
+                        </button>
+                        <button class="btn btn-info" style="background-color: rgb(121, 66, 47);" id="grid">
+                            Grid View
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-    
-        <div class="col-12 col-sm-6">
-            <h2>Under heavy construction!!</h2>
+        <div id="products" class="row view-group">
+            <div class="item col-xs-4 col-lg-4">
+                <div class="thumbnail card bg-light">
+                    <div class="img-event">
+                        <img class="group list-group-image img-fluid" src="images/chocolate_bites.jpg" alt="" />
+                    </div>
+                    <div class="caption card-body">
+                        <h4 class="group card-title inner list-group-item-heading">
+                            Chocolate Bites</h4>
+
+                        <p class="group inner list-group-item-text">
+                            10 pieces of premium chocolate bites with 50% cocoa and 50% milk with smooth mousse in the
+                            core and crunchy shell. Perfect bites for parties and ceremonies. Try it now!</p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    $11.99</p>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <a class="btn btn-success addtocart" data-toggle="modal" data-target="#success_tic">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-xs-4 col-lg-4">
+                <div class="thumbnail card bg-light">
+                    <div class="img-event">
+                        <img class="group list-group-image img-fluid" src="images/choco-mousse-400x250.jpg"
+                            alt="choco_mousse_400x250" />
+                    </div>
+                    <div class="caption card-body">
+                        <h4 class="group card-title inner list-group-item-heading">
+                            Chocolate Μousse</h4>
+
+                        <p class="group inner list-group-item-text">
+                            Chocolate mousse is an edible foam, originating from France and most commonly eaten as a
+                            dessert. Made with eggs, sugar, chocolate, cream, and other flavourings (500ml vase).</p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    $9.99</p>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <a class="btn btn-success addtocart" data-toggle="modal" data-target="#success_tic">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-xs-4 col-lg-4">
+                <div class="thumbnail card bg-light">
+                    <div class="img-event">
+                        <img class="group list-group-image img-fluid" src="images/Chocolate-Chips-400x250.jpg"
+                            alt="choco_chips" />
+                    </div>
+                    <div class="caption card-body">
+                        <h4 class="group card-title inner list-group-item-heading">
+                            Chocolate Cookies</h4>
+
+                        <p class="group inner list-group-item-text">
+                            15 chocolate chip cookies made with white sugar, brown sugar, flour, salt, eggs, a leavening
+                            agent such as
+                            baking soda, butter, vanilla extract and chocolate pieces. Our pick for you! Try them!</p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    $9.99</p>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <a class="btn btn-success addtocart" data-toggle="modal" data-target="#success_tic">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-xs-4 col-lg-4">
+                <div class="thumbnail card bg-light">
+                    <div class="img-event">
+                        <img class="group list-group-image img-fluid" src="images/Chocolux.jpg" alt="" />
+                    </div>
+                    <div class="caption card-body">
+                        <h4 class="group card-title inner list-group-item-heading">
+                            Luxurious Choco Pie</h4>
+
+                        <p class="group inner list-group-item-text">
+                            Amaze your friends and their palate with this dessert made entirely with high quality
+                            chocolate and 24 carat gold. If you wait for the gold price to rise you can resell it!
+                            Prices may change accordingly...</p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    $49.99</p>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <a class="btn btn-success addtocart" data-toggle="modal" data-target="#success_tic">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-xs-4 col-lg-4">
+                <div class="thumbnail card bg-light">
+                    <div class="img-event">
+                        <img class="group list-group-image img-fluid" src="images/special-choco-bars.jpg" alt="" />
+                    </div>
+                    <div class="caption card-body">
+                        <h4 class="group card-title inner list-group-item-heading">
+                            Healthy Choco Bars</h4>       
+
+                        <p class="group inner list-group-item-text">
+                            Stay fit, stay healthy, stay happy with our chocolate bars. 10 bars infused with our most
+                            premium ingredients to make you happy and energetic. Enjoy them everywhere without regrets!
+                        </p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    $9.99/kg</p>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <a class="btn btn-success addtocart" data-toggle="modal" data-target="#success_tic">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-xs-4 col-lg-4">
+                <div class="thumbnail card bg-light">
+                    <div class="img-event">
+                        <img class="group list-group-image img-fluid" src="images/Ricotta-Cheese-Chocolate-400x250.jpg"
+                            alt="" />
+                    </div>
+                    <div class="caption card-body">
+                        <h4 class="group card-title inner list-group-item-heading">
+                            Choco Cheese</h4>    
+
+                        <p class="group inner list-group-item-text">
+                            You will thank us after trying this dessert. The compination of chocolate and cheese is
+                            unique way to comfort yourself! 5 pieces of premium quality milk chocolate combined with
+                            ricotta cheese.
+                            Try it now!</p>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    $12.99</p>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <a class="btn btn-success addtocart" data-toggle="modal" data-target="#success_tic">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    
     </div>
-        
+
+    <!-- SUCCESS ADD TO CART (modal) -->
+    <div id="success_tic" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <a class="close" href="#" data-dismiss="modal">&times;</a>
+                <div class="page-body">
+                    <div class="head">
+                        <h3 style="margin-top:5px;"><span class="cart-item"></span></h3>
+                        <h4>Successfully added to cart!</h4>
+                    </div>
+
+                    <h1 style="text-align:center;">
+                        <div class="checkmark-circle">
+                            <div class="background"></div>
+                            <div class="checkmark draw"></div>
+                        </div>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART MODAL -->
+    <div id="cartModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Items in your cart:</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- <h1 class="text-center"><span class="cart-counter" style="all:none !important"> 0</span></h1> -->
+                    <h5><span class="cart-total">Empty cart</span></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success sumbitOrder">Submit order</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-        
-
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -134,11 +356,13 @@
     </footer>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js/"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 
 </body>
 
